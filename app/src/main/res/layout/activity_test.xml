@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fcbrains.xinruikeji.MainActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.fcbrains.xinruikeji.widget.RadarView
+        android:id="@+id/radar"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reset"
+        android:textColor="#000000" />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试"/>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.fcbrains.xinruikeji.widget.MutiProgress
+        android:id="@+id/mp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:nodesNum="5"
+        app:currNodeState="1"
+        app:nodeRadius="10dp"
+        app:processingLineColor="#FF00FF"
+        app:progressingDrawable="@mipmap/doing"
+        app:unprogressingDrawable="@mipmap/undo"
+        app:progresFailDrawable="@mipmap/faile"
+        app:progresSuccDrawable="@mipmap/success" />
+</LinearLayout>
